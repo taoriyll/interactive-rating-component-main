@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Interactive rating component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Rating state start -->
+
+    <form class="rating-form" action="submit">
+      <img src="./images/icon-star.svg" alt="star icon">
+      <h1>How did we do?</h1>
+
+      <p class="text">
+        Please let us know how we did with your support request. All feedback is
+        appreciated to help us improve our offering!
+      </p>
+
+      <div class="ratings">
+        <label>1<input type="radio" id="input1" name="rating" value="1">
+        </label>
+        <label>2<input type="radio" id="input2" name="rating" value="2"></label>
+        <label>3<input type="radio" id="input3" name="rating" value="3"></label>
+        <label>4<input type="radio" id="input4" name="rating" value="4"></label>
+        <label>5<input type="radio" id="input5" name="rating" value="5"></label>
+      </div>
+
+      <input class="submit-btn" type="submit" value="Submit"/>
+    </form>
+
+    <!-- Rating state end -->
+
+    <!-- Thank you state start -->
+
+    <div class="thank-you">
+      <img src="./images/illustration-thank-you.svg" alt="'Thank-you' svg">
+      <p class="rating-select">You selected out of 5 </p>
+    <!-- Add rating here -->
+     <p class="text">Thank you! We appreciate you taking the time to give a rating. If
+      you ever need more support, don’t hesitate to get in touch!</p>
+    
+    </div>
+
+    
+
+    <!-- Thank you state end -->
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://github.com/taoriyll">taoriyll</a>.
+    </div>
+  </body>
+</html>
