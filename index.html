@@ -12,54 +12,59 @@
       href="./images/favicon-32x32.png"
     />
 
-    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="output.css" />
 
     <title>Frontend Mentor | Interactive rating component</title>
   </head>
   <body>
-      <!-- Rating state start -->
-    <form class="rating-form">
-      <img src="./images/icon-star.svg" alt="star icon" />
-      <h1>How did we do?</h1>
+    <!-- Rating state start -->
+    <div class="container">
+      <form class="rating-form">
+        <img src="./images/icon-star.svg" alt="star icon" />
+        <h1>How did we do?</h1>
 
-      <p class="text">
-        Please let us know how we did with your support request. All feedback is
-        appreciated to help us improve our offering!
-      </p>
+        <p class="text">
+          Please let us know how we did with your support request. All feedback
+          is appreciated to help us improve our offering!
+        </p>
 
-      <div class="ratings">
-        <label for="input1"
-          >1<input type="radio" id="input1" name="rating" value="1" required/>
-        </label>
-        <label for="input2"
-          >2<input type="radio" id="input2" name="rating" value="2" required
-        /></label>
-        <label for="input3"
-          >3<input type="radio" id="input3" name="rating" value="3" required
-        /></label>
-        <label for="input4"
-          >4<input type="radio" id="input4" name="rating" value="4" required
-        /></label>
-        <label for="input5"
-          >5<input type="radio" id="input5" name="rating" value="5" required
-        /></label>
+        <div class="ratings">
+          <label for="input1"
+            >1<input type="radio" id="input1" name="rating" value="1" required
+            />
+          </label>
+          <label for="input2"
+            >2<input type="radio" id="input2" name="rating" value="2" required
+          /></label>
+          <label for="input3"
+            >3<input type="radio" id="input3" name="rating" value="3" required
+          /></label>
+          <label for="input4"
+            >4<input type="radio" id="input4" name="rating" value="4" required
+          /></label>
+          <label for="input5"
+            >5<input type="radio" id="input5" name="rating" value="5" required
+          /></label>
+        </div>
+
+        <input class="submit-btn" type="submit" value="Submit" />
+      </form>
+      <!-- Rating state end -->
+
+      <!-- Thank you state start -->
+      <div class="thank-you" style="display: none">
+        <img src="./images/illustration-thank-you.svg" alt="'Thank-you' svg" />
+        <p class="rating-select">
+          You selected <span class="selected-rating"></span> out of 5
+        </p>
+        <p class="text">
+          Thank you! We appreciate you taking the time to give a rating. If you
+          ever need more support, don’t hesitate to get in touch!
+        </p>
       </div>
-
-      <input class="submit-btn" type="submit" value="Submit" />
-    </form>
-    <!-- Rating state end -->
-
-    <!-- Thank you state start -->
-    <div class="thank-you" style="display: none;">
-      <img src="./images/illustration-thank-you.svg" alt="'Thank-you' svg" />
-      <p class="rating-select">You selected <span class="selected-rating"></span> out of 5</p>
-      <p class="text">
-        Thank you! We appreciate you taking the time to give a rating. If you
-        ever need more support, don’t hesitate to get in touch!
-      </p>
+      <!-- Thank you state end -->
     </div>
-    <!-- Thank you state end -->
-    
+
     <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
@@ -67,19 +72,21 @@
       >. Coded by <a href="https://github.com/taoriyll">taoriyll</a>.
       <script>
         const selectedRating = document.querySelector(".selected-rating");
-        const form = document.querySelector(".rating-form")
-        const note = document.querySelector('.thank-you')
+        const form = document.querySelector(".rating-form");
+        const note = document.querySelector(".thank-you");
 
-        form.addEventListener("submit",(e) => {
-            e.preventDefault(); // Prevent the default form submission
-            const rating = document.getElementsByName('rating');
-            const ratingArr = [...rating]
-            
-            ratingArr.map((item) => item.checked ? selectedRating.innerText = item.value : '');
+        form.addEventListener("submit", (e) => {
+          e.preventDefault(); // Prevent the default form submission
+          const rating = document.getElementsByName("rating");
+          const ratingArr = [...rating];
 
-            note.style.display = 'block';
-            form.style.display = 'none';
-          });
+          ratingArr.map((item) =>
+            item.checked ? (selectedRating.innerText = item.value) : ""
+          );
+
+          note.style.display = "block";
+          form.style.display = "none";
+        });
       </script>
     </div>
   </body>

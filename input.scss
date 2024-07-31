@@ -6,11 +6,14 @@ $clr-primary-2: hsl(217, 12%, 63%);
 $clr-primary-3: hsl(213, 19%, 18%);
 $clr-orange: hsl(25, 97%, 53%);
 
-@mixin circle(){
+@mixin colors() {
   background-color: $clr-primary-3;
-  border-radius: 50%;
-  justify-content: center;
-  align-items: center;
+  
+  
+}
+
+@mixin text-align() {
+  text-align: center;
 }
 
 *,
@@ -33,9 +36,9 @@ body {
   font-size: 16px;
 }
 
-.rating-form {
-  max-width: 500px;
-  height: 500px;
+.container {
+  max-width: 425px;
+  height: 425px;
   margin: 0 auto;
   background: linear-gradient(
     20deg,
@@ -44,32 +47,49 @@ body {
   );
   border-radius: 20px;
   padding: 30px;
-  img{
-    // @include circle;
-  }
-}
-
-.ratings{
-  input{
-    display: none;
-  }
-  label{
-    position: relative;
-  height: 20px;
-  width: 20px;
-  background-color: #ccc;
-  border-radius: 50%;
-  display: inline-block;
-  margin-right: 10px;
+  img {
+    padding: 0.9rem;
+    border-radius: 50%;
+    background-color: $clr-primary-3;
+    margin-bottom: 2rem;
   }
 }
 
 h1 {
   color: $clr-primary-1;
+  margin-bottom: 0.6rem;
 }
 
 p {
   color: $clr-primary-2;
+  margin-bottom: 1rem;
+}
+.ratings {
+  display: flex;
+  justify-content: space-between;
+  input {
+    display: none;
+  }
+  label {
+    background-color: $clr-primary-3;
+    color: $clr-primary-2;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    &:hover {
+      background-color: $clr-orange;
+      color: $clr-primary-3;
+    }
+    &:checked {
+      background-color: $clr-primary-1;
+      color: $clr-primary-3;
+    }
+  }
 }
 
 .attribution {
