@@ -13,9 +13,9 @@ body {
   height: 100vh;
   margin: 0;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   font-size: 16px;
 }
 
@@ -27,16 +27,17 @@ body {
   border-radius: 20px;
   padding: 30px;
 }
-.container img {
-  padding: 0.9rem;
-  border-radius: 50%;
+
+.rating-form img {
   background-color: hsl(213, 19%, 18%);
-  margin-bottom: 2rem;
+  padding: 14px;
+  border-radius: 50%;
+  margin-bottom: 32px;
 }
 
 h1 {
   color: #ffffff;
-  margin-bottom: 0.6rem;
+  margin-bottom: 10px;
 }
 
 p {
@@ -47,6 +48,7 @@ p {
 .ratings {
   display: flex;
   justify-content: space-between;
+  margin: 25px 0;
 }
 .ratings input {
   display: none;
@@ -54,12 +56,12 @@ p {
 .ratings label {
   background-color: hsl(213, 19%, 18%);
   color: hsl(217, 12%, 63%);
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -67,9 +69,49 @@ p {
   background-color: hsl(25, 97%, 53%);
   color: hsl(213, 19%, 18%);
 }
-.ratings label:checked {
+.ratings input:checked + label {
   background-color: #ffffff;
   color: hsl(213, 19%, 18%);
+}
+
+.submit-btn {
+  background-color: hsl(25, 97%, 53%);
+  color: hsl(213, 19%, 18%);
+  width: 100%;
+  margin-top: 10px;
+  border: none;
+  border-radius: 20px;
+  font-family: "Overpass", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  top: 100%;
+  cursor: pointer;
+}
+.submit-btn:hover {
+  background-color: #ffffff;
+  color: hsl(213, 19%, 18%);
+}
+
+.thank-you {
+  text-align: center;
+}
+.thank-you img {
+  margin: 10px 0;
+}
+
+.rating-select {
+  background-color: hsl(213, 19%, 18%);
+  color: hsl(25, 97%, 53%);
+  border-radius: 20px;
+  width: fit-content;
+  padding: 5px 10px;
+  margin: 30px auto;
+}
+
+.hidden {
+  display: none;
 }
 
 .attribution {
