@@ -6,17 +6,19 @@ $clr-primary-2: hsl(217, 12%, 63%);
 $clr-primary-3: hsl(213, 19%, 18%);
 $clr-orange: hsl(25, 97%, 53%);
 
+//Mixins
 @mixin colors($background, $color) {
   background-color: $background;
   color: $color;
 }
 
-@mixin flex(){
+@mixin flex() {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+//SCSS
 *,
 ::after,
 ::before {
@@ -32,45 +34,45 @@ body {
   margin: 0;
   @include flex();
   flex-wrap: wrap;
-  font-size: 16px;
+  font-size: 15rpx;
 }
 
 .container {
-  max-width: 425px;
-  height: 425px;
+  width: 25rem;
+  height: 25rem;
   margin: 0 auto;
   background: linear-gradient(
     20deg,
     hsl(215, 23%, 14%) 44%,
     $clr-primary-3 100%
   );
-  border-radius: 20px;
-  padding: 30px;
+  border-radius: 1.25rem;
+  padding: 1.875rem;
 }
 
-.rating-form{
+.rating-form {
   img {
     background-color: $clr-primary-3;
-    padding: 14px;
+    padding: 0.875rem;
     border-radius: 50%;
-    margin-bottom: 32px;
+    margin-bottom: 1.8rem;
   }
 }
 
 h1 {
   color: $clr-primary-1;
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
 }
 
 p {
   color: $clr-primary-2;
-  margin-bottom: 1rem;
+  margin-bottom: 0.625rem;
 }
 
 .ratings {
   display: flex;
   justify-content: space-between;
-  margin: 25px 0;
+  margin: 1.563rem 0;
   input {
     display: none;
   }
@@ -78,53 +80,52 @@ p {
     @include colors($clr-primary-3, $clr-primary-2);
     @include flex();
     border-radius: 50%;
-    width: 55px;
-    height: 55px;
+    width: 3.438rem;
+    height: 3.438rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
     &:hover {
       @include colors($clr-orange, $clr-primary-3);
     }
   }
-  input:checked + label{
+  input:checked + label {
     @include colors($clr-primary-1, $clr-primary-3);
   }
 }
 
-.submit-btn{
+.submit-btn {
   @include colors($clr-orange, $clr-primary-3);
   width: 100%;
-  margin-top: 10px;
   border: none;
-  border-radius: 20px;
+  border-radius: 1.25rem;
   font-family: "Overpass", sans-serif;
   font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
-  padding: 10px 20px;
+  padding: 0.625rem 1.25rem;
   top: 100%;
   cursor: pointer;
-  &:hover{
+  &:hover {
     @include colors($clr-primary-1, $clr-primary-3);
   }
 }
 
-.thank-you{
+.thank-you {
   text-align: center;
-  img{
-    margin: 10px 0;
+  img {
+    margin: 0.313rem 0;
   }
 }
 
-.rating-select{
+.rating-select {
   @include colors($clr-primary-3, $clr-orange);
-  border-radius: 20px;
+  border-radius: 1.25rem;
   width: fit-content;
-  padding: 5px 10px;
-  margin: 30px auto;
+  padding: 0.5rem 0.9rem;
+  margin: 1.875rem auto;
 }
 
-.hidden{
+.hidden {
   display: none;
 }
 

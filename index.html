@@ -31,13 +31,13 @@
         <div class="ratings">
           <input type="radio" id="input1" name="rating" value="1" required />
           <label for="input1">1</label>
-          <input type="radio" id="input2" name="rating" value="2" required/>
+          <input type="radio" id="input2" name="rating" value="2" required />
           <label for="input2">2</label>
-          <input type="radio" id="input3" name="rating" value="3" required/></label>
+          <input type="radio" id="input3" name="rating" value="3" required />
           <label for="input3">3</label>
-          <input type="radio" id="input4" name="rating" value="4" required/>
+          <input type="radio" id="input4" name="rating" value="4" required />
           <label for="input4">4</label>
-          <input type="radio" id="input5" name="rating" value="5" required/>
+          <input type="radio" id="input5" name="rating" value="5" required />
           <label for="input5">5</label>
         </div>
 
@@ -47,15 +47,15 @@
 
       <!-- Thank you state start -->
       <div class="thank-you hidden">
-          <img src="./images/illustration-thank-you.svg" alt="'Thank-you' svg" />
-          <p class="rating-select">
-            You selected <span class="selected-rating"></span> out of 5
-          </p>
-          <h1>Thank you!</h1>
-          <p class="text">
-            We appreciate you taking the time to give a rating. If you
-            ever need more support, don’t hesitate to get in touch!
-          </p>
+        <img src="./images/illustration-thank-you.svg" alt="'Thank-you' svg" />
+        <p class="rating-select">
+          You selected <span class="selected-rating"></span> out of 5
+        </p>
+        <h1>Thank you!</h1>
+        <p class="text">
+          We appreciate you taking the time to give a rating. If you ever need
+          more support, don’t hesitate to get in touch!
+        </p>
       </div>
       <!-- Thank you state end -->
     </div>
@@ -74,13 +74,13 @@
           e.preventDefault();
           const rating = document.getElementsByName("rating");
           const ratingArr = [...rating];
+          
           ratingArr.map((item) =>
             item.checked ? (selectedRating.innerText = item.value) : ""
           );
 
-          note.classList.remove('hidden');
-          form.classList.add('hidden');
-          // form.style.display = "none";
+          note.classList.remove("hidden");
+          form.classList.add("hidden");
         });
       </script>
     </div>
